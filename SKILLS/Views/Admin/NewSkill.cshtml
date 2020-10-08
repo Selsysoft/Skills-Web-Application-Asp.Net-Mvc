@@ -1,0 +1,19 @@
+﻿@model SKILLS.Models.classes.SKILL
+@{
+    ViewBag.Title = "NewSkill";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:20px">
+        <label>Skill Comment</label>
+        @Html.TextBoxFor(x => x.ACIKLAMA, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:20px">
+        <label>Skill Value</label>
+        @Html.TextBoxFor(x => x.DEGER, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">CREATE</button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+﻿@using SKILLS.Models.classes
+@model List<SKILL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>SKILL</th>  
+        <th>VALUE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+    </tr>
+    @foreach (var skill in Model)
+    {
+<tr>
+    <td>@skill.ID</td>
+    <td>@skill.ACIKLAMA</td>
+    <td>@skill.DEGER</td>
+    <td><a class="btn btn-danger" href="/Admin/DeleteSkill/@skill.ID">DELETE</a></td>
+    <td><a class="btn btn-success"href="/Admin/UpdateSkill/@skill.ID">UPDATE</a></td>
+
+</tr>
+    }
+
+</table>
+
